@@ -1,2 +1,9 @@
 <h3>This is a USER component!</h3>
 <p>User id: <strong>ID {{ id }}</strong></p>
+<hr>
+<div class="list-group">
+  <div *ngFor="let task of tasks" class="list-group-item">
+    <p>{{ task.title }}</p>
+    <button class="btn btn-primary" (click)="changeTaskTitle(task.taskId)">Change task title</button>
+  </div>
+</div>
